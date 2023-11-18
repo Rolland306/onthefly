@@ -18,7 +18,7 @@ const App = () => {
   const API_URL =
     process.env.NODE_ENV === "production"
       ? "https://onthefly-production.up.railway.app"
-      : "";
+      : "http://localhost:3001";
 
   const [trips, setTrips] = useState([]);
   const [user, setUser] = useState([]);

@@ -8,28 +8,32 @@ const ReadDestinations = (props) => {
 
 
     useEffect(() => {
-
-        setDestinations(props.data);
+        const fetchDestinations = async () => {
+            const response = await fetch(`${props.api_url}/api/destinations`)
+            const data = await response.json()
+            setDestinations(data)
+        }
+        fetchDestinations()
     }, [props]);
-    
+
 
     return (
         <div className="ReadDestinations">
             {
                 destinations && destinations.length > 0 ?
-                destinations.map((destination,index) => 
-                   <DestinationCard key={destination.id} 
-                         id={destination.id} 
-                         destination={destination.destination} 
-                         description={destination.description} 
-                         city={destination.city} 
-                         country={destination.country}
-                         img_url={destination.img_url}
-                         flag_img_url={destination.flag_img_url} 
-                    />
-                ) : <h3 className="noResults">{'No Destinations Yet 😞'}</h3>
+                    destinations.map((destination, index) =>
+                        <DestinationCard key={destination.id}
+                            id={destination.id}
+                            destination={destination.destination}
+                            description={destination.description}
+                            city={destination.city}
+                            country={destination.country}
+                            img_url={destination.img_url}
+                            flag_img_url={destination.flag_img_url}
+                        />
+                    ) : <h3 className="noResults">{'No Destinations Yet 😞'}</h3>
             }
-        </div>  
+        </div>
     )
 }
 

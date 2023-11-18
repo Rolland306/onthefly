@@ -1,7 +1,7 @@
 .App {
-  font-family:Avenir, "Century Gothic", sans-serif;
-  font-weight:100; 
-  font-style:normal;
+  font-family: Avenir, "Century Gothic", sans-serif;
+  font-weight: 100;
+  font-style: normal;
   font-size: calc(10px + 2vmin);
   color: #373D3F;
   justify-content: center;
@@ -9,7 +9,7 @@
   background-color: #97bfd8a3;
   background-position: right center;
   background-size: cover;
-  padding:20px;
+  padding: 20px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -22,7 +22,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  
+
 }
 
 .header {
@@ -50,10 +50,11 @@ button {
   font-size: 15px;
   font-weight: 500;
   font-family: inherit;
-  color:373D3F;
+  color: 373D3F;
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 .headerBtn:hover {
   background-color: #97bfd8;
   transition: all .7s ease;
